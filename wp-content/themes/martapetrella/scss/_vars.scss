@@ -1,0 +1,31 @@
+// COLORS
+$base: #fff;
+$baseText : #333;
+$brandColorContrast : #fff;
+$brandColor : #3ab44b;
+$boxColor : #fff;
+$boxBorder : #ddd;
+$boxBorderWidth : 1px;
+$box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+
+// MEASURES
+$gap : 15px;
+$headerHeight : 60px;
+$baseFont : 16px;
+$formFont : 18px;
+$section-vert-gap: 25px;
+// MIXINS
+@mixin transition($style) {
+  -webkit-transition: $style;
+     -moz-transition: $style;
+      -ms-transition: $style;
+          transition: $style;
+}
+
+@mixin box() {
+  background: $boxColor;
+  overflow: auto;
+  margin: 0;
+  padding: 2em 1em;
+  border: solid $boxBorder $boxBorderWidth;
+}

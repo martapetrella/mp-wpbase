@@ -1,0 +1,116 @@
+.header {
+  background: white;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+
+.navigation {
+  height: $headerHeight;
+  background: $base;
+  width: 100%;
+}
+
+.navigation-list {
+  float: right;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+    li {
+      margin: 0;
+      padding: 0;
+      display: block;
+      float: left;
+      a {
+       height: $headerHeight;
+       line-height: $headerHeight;
+       display: block;
+       float: left;
+       padding: 0 $gap;
+       font-size: $baseFont;
+       color: $brandColor;
+       font-weight: bold;
+       text-decoration: none;
+       &:hover {
+         color: scale-color($brandColor, $lightness: -20%);
+         background : scale-color($base, $lightness: -5%);
+       }
+     }
+    }
+  }
+}
+
+.brand {
+  height: $headerHeight;
+  line-height: $headerHeight;
+  display: block;
+  float: left;
+  padding: 0 $gap;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.8;
+  }
+  img {
+    height: $headerHeight;
+    width: auto;
+    float: left;
+  }
+}
+
+.numverde-in-header {
+  display: block;
+  height: ($headerHeight - 15);
+  margin: 5px 0;
+  width: auto;
+  &, img {
+    height: ($headerHeight - 15);
+  }
+}
+
+//@media( max-width: $screen-sm-max ) {
+  .navigation-list, .numverde-in-header, .brand {
+  }
+  .navigation-list {
+    height: auto;
+    display:block;
+    text-align: right;
+    width: auto;
+  }
+  .brand {
+    height: auto;
+    display:block;
+    max-width: 55%;
+    width: auto;
+    padding: 2px 5px 0 5px;
+    img {
+      display: inline;
+      height: ($headerHeight - 4);
+    }
+  }
+  .numverde-in-header {
+    height: auto;
+    display: block;
+    margin: 7px 0 0 0;
+    &, img {
+      height: ($headerHeight - 15);
+    }
+  }
+//}
+
+/*@media( max-width: $screen-xs-max ) {
+  .brand {
+    max-width: 65%;
+  }
+  .navigation-list {
+    //max-width: 30%;
+    margin-top: 5px;
+  }
+}*/

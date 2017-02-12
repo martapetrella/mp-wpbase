@@ -1,0 +1,1 @@
+STATICO HOME
