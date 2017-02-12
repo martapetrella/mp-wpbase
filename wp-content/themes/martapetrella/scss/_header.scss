@@ -33,11 +33,11 @@
        float: left;
        padding: 0 $gap;
        font-size: $baseFont;
-       color: $brandColor;
+       color: $brand-primary;
        font-weight: bold;
        text-decoration: none;
        &:hover {
-         color: scale-color($brandColor, $lightness: -20%);
+         color: scale-color($brand-primary, $lightness: -20%);
          background : scale-color($base, $lightness: -5%);
        }
      }

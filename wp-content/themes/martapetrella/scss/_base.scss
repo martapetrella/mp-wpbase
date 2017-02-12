@@ -43,7 +43,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1,h2,h3 {
-  color: $brandColor;
+  color: $brand-primary;
 }
 
 h1 {
@@ -150,7 +150,7 @@ a.thumbnail {
   }
   a:hover &,
   &:hover{
-    border-color: $brandColor;
+    border-color: $brand-primary;
   }
 }
 

@@ -16,7 +16,7 @@ select  {
   //border:none;
   border-bottom: 1px solid #bbb;
   &:focus {
-    border-bottom: 1px solid $brandColor;
+    border-bottom: 1px solid $brand-primary;
   }
 }
 
@@ -38,6 +38,6 @@ textarea {
   border: 1px solid #ddd;
   border-bottom: 1px solid #bbb;
   &:focus {
-    border-bottom: 1px solid $brandColor;
+    border-bottom: 1px solid $brand-primary;
   }
 }
