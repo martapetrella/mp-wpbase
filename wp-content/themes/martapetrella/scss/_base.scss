@@ -88,32 +88,24 @@ small {
   line-height: 1.1em;
 }
 
-header {
-  opacity: 0.5;
-}
-
 .wrapper {
   padding: 0;
   margin: 0;
   width: 100%;
   max-width: 100%;
-  border: green solid 5px;
   position: relative;
   float: left;
 }
 
 main[role=main] {
+  @extend .container;
   position: relative;
   display: table;
   padding: 0;
   margin: 0;
   margin: auto;
-  //padding-top: $headerHeight;
   padding-bottom: $section-vert-gap;
   font-size: $font-size-base;
-  border: red solid 5px;
-  @extend .container;
-  height:3000px;
 }
 .onecol main[role=main] {
   @extend .col-md-12;

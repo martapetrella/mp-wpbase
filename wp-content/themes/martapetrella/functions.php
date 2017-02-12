@@ -13,3 +13,10 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css' );
 
 // END ENQUEUE PARENT ACTION
+
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');
+
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'martapetrella' ),
+) );

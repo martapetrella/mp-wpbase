@@ -1,33 +1,23 @@
-<!-- INIZIO FOOTER -->
+			<!-- footer -->
+			<footer class="footer" role="contentinfo">
 
-<x/xdxxixvx> <!-- fine box-->
+				<!-- copyright -->
+				<p class="copyright">
+					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
+					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
+				</p>
+				<!-- /copyright -->
 
-      </section>
-    </div> <!-- fine container -->
-  </div> <!-- fine main-content -->
+			</footer>
+			<!-- /footer -->
 
+		</div>
+		<!-- /wrapper -->
 
-
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <!-- copyright -->
-            <p class="copyright">
-              &copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?> Marco Saracino e Marta Petrella
-            </p>
-            <!-- /copyright -->
-          </div>
-        </div>
-      </div>
-    </footer>
-
-
- <!-- jQuery e plugin JavaScript  -->
- <script src="http://code.jquery.com/jquery.js"></script>
- <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
- <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/init.js"></script>
- <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bookmark.js"></script>
+		<!-- jQuery e plugin JavaScript  -->
+	  <script src="http://code.jquery.com/jquery.js"></script>
+	  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
+	  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/init.js"></script>
 
 		<?php wp_footer(); ?>
 

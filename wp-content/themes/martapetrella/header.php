@@ -1,46 +1,80 @@
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
-<head>
-	<?php include 'head.php'; ?>
-	<?php wp_head(); ?>
-	<?php if( paypal_ID() == true ) { $is_payed = true; } ?>
-</head>
+	<head>
+		<meta charset="<?php bloginfo('charset'); ?>">
+		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
-<body <?php body_class(); ?>>
+		<link href="//www.google-analytics.com" rel="dns-prefetch">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
-	<?php include 'nav.php'; ?>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-	<div class="main-content <?php echo ( 1==1 ) ? '' : 'onecol'; ?>">
+		<?php wp_head(); ?>
+		<script>
+        // conditionizr.com
+        // configure environment tests
+        conditionizr.config({
+            assets: '<?php echo get_template_directory_uri(); ?>',
+            tests: {}
+        });
+        </script>
 
-				<div class="main-container <?php echo ( get_page_template_slug() == 'template-home.php') ? '' : 'container'; ?>">
+	</head>
+	<body <?php body_class(); ?>>
 
-					<section class="row">
+		<!-- wrapper -->
+		<div class="wrapper">
 
-						<?php if( '' === get_post()->post_content && is_single() ) { ?>
-						<!-- COL ASIDE MOBILE -->
-						<div class="col-md-4 hidden-md hidden-lg">
-							<div class="hidden-md hidden-lg">
-								<?php if( $is_payed == false ) { ?>
-									<p>
-										Compra le informazioni di contatto di questa richiesta di preventivo.
-									</p>
-									<button class="btn btn-primary " data-lightbox-button="contact-panel" onclick="addLightbox( $(this) )">
-									  Compra il contatto
-									</button>
-								<?php } else {?>
-									<h3>
-										Contatto acquistato.
-									</h3>
-									<button class="btn btn-success" data-lightbox-button="contact-panel" onclick="addLightbox( $(this) )">
-									  Clicca qui per contattare!
-									</button>
-								<?php } ?>
-							</div>
-							<div id="contact-panel" data-lightbox="contact-panel" class="hidden-md hidden-lg">
-								<?php include 'components/contact-panel.php'; ?>
-								<?php //include 'components/advices.php'; ?>
-							</div>
-						</div>
-						<?php } ?>
+			<!-- header -->
+			<header class="header clear" role="banner">
 
-<!-- FINE HEADER -->
+					<!-- logo -->
+					<div class="logo">
+						<a href="<?php echo home_url(); ?>">
+							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+							<?php /* <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img"> */ ?>
+						</a>
+					</div>
+					<!-- /logo -->
+
+					<!-- nav -->
+					<nav class="navbar navbar-default navbar-fixed-top">
+						<div class="container">
+							<div class="row">
+						    <!-- Brand and toggle get grouped for better mobile display -->
+						    <div class="navbar-header">
+						      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						      <a class="navbar-brand" href="#">Brand</a>
+						    </div>
+									<?php
+									wp_nav_menu( array(
+										'menu'              => 'primary',
+										'theme_location'    => 'primary',
+										'depth'             => 2,
+										'container'         => 'div',
+										'container_class'   => 'collapse navbar-collapse',
+										'container_id'      => 'bs-example-navbar-collapse-1',
+										'menu_class'        => 'nav navbar-nav navbar-right',
+										'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+										'walker'            => new wp_bootstrap_navwalker())
+									);
+									?><!-- /.navbar-collapse -->
+							</div><!-- /.row -->
+						</div><!-- /.container -->
+						</nav>
+
+
+					<!-- /nav -->
+
+			</header>
+
+
+			<!-- /header -->
