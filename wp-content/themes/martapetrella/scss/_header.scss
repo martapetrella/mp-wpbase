@@ -6,11 +6,12 @@
   width: 100%;
   z-index: 999;
   box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  max-height: $headerHeight;
 }
 
 .navigation {
   height: $headerHeight;
-  background: $base;
+  background: $body-bg;
   width: 100%;
 }
 
@@ -32,13 +33,13 @@
        display: block;
        float: left;
        padding: 0 $gap;
-       font-size: $baseFont;
+       font-size: $font-size-base;
        color: $brand-primary;
        font-weight: bold;
        text-decoration: none;
        &:hover {
          color: scale-color($brand-primary, $lightness: -20%);
-         background : scale-color($base, $lightness: -5%);
+         background : scale-color($body-bg, $lightness: -5%);
        }
      }
     }

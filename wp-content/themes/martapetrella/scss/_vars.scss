@@ -1,19 +1,13 @@
 // COLORS
-$base: #fff;
-$baseText : #333;
-$brand-primaryContrast : #fff;
-$brand-primary : $brand-primary;
-$boxColor : #fff;
-$boxBorder : #ddd;
-$boxBorderWidth : 1px;
+
 $box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
 
 // MEASURES
+
 $gap : 15px;
 $headerHeight : 60px;
-$baseFont : 16px;
-$formFont : 18px;
 $section-vert-gap: 25px;
+
 // MIXINS
 @mixin transition($style) {
   -webkit-transition: $style;
@@ -22,7 +16,7 @@ $section-vert-gap: 25px;
           transition: $style;
 }
 
-@mixin box() {
+@mixin box( $boxColor : #fff, $boxBorder : #ddd, $boxBorderWidth : 1px ) {
   background: $boxColor;
   overflow: auto;
   margin: 0;
